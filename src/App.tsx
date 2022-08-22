@@ -1,20 +1,15 @@
 import React from 'react'
 
 // 👇️ type props as {name: string}, and state as {value: string}
-class Square extends React.Component<any, any> {
-  constructor(props: any) {
-    super(props)
-  }
-  render() {
-    return (
-      <button 
-        className="square"
-        onClick={() => this.props.onClick()}
-      >
-        { this.props.value }
-      </button>
-    );
-  }
+function Square(props:any) {
+  return (
+    <button 
+      className="square"
+      onClick={props.onClick}
+    >
+      { props.value }
+    </button>
+  );
 }
 
 class Board extends React.Component<any, any> {
